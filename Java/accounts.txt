@@ -1,2 +1,0 @@
-carl, password
-hilario, pass123
