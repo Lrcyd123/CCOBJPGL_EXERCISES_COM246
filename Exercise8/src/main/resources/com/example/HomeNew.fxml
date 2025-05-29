@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.HomeController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="372.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="welcometextfield" layoutX="14.0" layoutY="14.0" text="Welcome,">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernamelabel" layoutX="93.0" layoutY="14.0" text="Shoti">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="passwordtextfield" layoutX="101.0" layoutY="88.0" />
+            <TextField fx:id="usernametextfield" layoutX="101.0" layoutY="54.0" />
+            <Label fx:id="usernameLabel" layoutX="31.0" layoutY="58.0" text="username" />
+            <Label layoutX="28.0" layoutY="92.0" text="password" />
+            <Label fx:id="statustextfield" layoutX="38.0" layoutY="134.0" text="status" />
+            <Button fx:id="btncreate" layoutX="29.0" layoutY="188.0" mnemonicParsing="false" onAction="#createuser" text="Create" />
+            <Button fx:id="btndelete" layoutX="159.0" layoutY="188.0" mnemonicParsing="false" onAction="#deleteuser" text="Delete" />
+            <Button fx:id="btnupdate" layoutX="93.0" layoutY="188.0" mnemonicParsing="false" onAction="#updateuser" text="Update" />
+            <TableView fx:id="tabletab" layoutX="260.0" layoutY="51.0" prefHeight="200.0" prefWidth="330.0">
+              <columns>
+                <TableColumn fx:id="usernamecolum" prefWidth="75.0" text="username" />
+                <TableColumn fx:id="passwordcolum" prefWidth="75.0" text="password" />
+                  <TableColumn fx:id="accountcolum" prefWidth="75.0" text="accountcreated" />
+                  <TableColumn fx:id="statuscolum" prefWidth="75.0" text="status" />
+              </columns>
+            </TableView>
+            <Button fx:id="transactionsbutton" layoutX="486.0" layoutY="305.0" mnemonicParsing="false" text="Transactions" />
+            <ChoiceBox fx:id="statuschoicebox" layoutX="101.0" layoutY="130.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
